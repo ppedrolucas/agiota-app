@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Agiota App" />
+    <meta
+      name="description"
+      content="Calcule o montante final de qualquer capital aplicado mediante a taxa de juros e tempo."
+    />
+    <meta name="theme-color" content="#fff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Calculadora de Juros Compostos</title>
+  </head>
+  <body>
+    <div class="h-screen flex items-center justify-center">
+      <div class="w-sm p-6 rounded-lg shadow-2xl border border-gray-300">
+        <h1 class="mb-4 font-bold text-xl">Agiota App</h1>
+        <p>
+          Este é um aplicativo web para calcular os juros à quem eu emprestar
+          dinheiro
+        </p>
+        <form class="py-4">
+          <fieldset>
+            <legend class="font-semibold text-lg mb-4">Juros Composto</legend>
+            <div>
+              <label for="capital">Capital a ser aplicado</label>
+              <input
+                type="number"
+                id="capital"
+                placeholder="R$"
+                class="border border-gray-300 w-full rounded-lg px-3 py-1 focus:outline-2 outline-blue-500 mt-3 transition duration-300"
+              />
+            </div>
+            <div class="grid grid-cols-2 gap-4 my-3">
+              <div class="">
+                <label for="taxa">Taxa de Juros</label>
+                <input
+                  type="number"
+                  id="taxa"
+                  placeholder="%"
+                  class="border w-full border-gray-300 w-full rounded-lg px-3 py-1 focus:outline-2 outline-blue-500 mt-3 transition duration-300"
+                />
+              </div>
+              <div>
+                <label for="tempo">Periodo de tempo</label>
+                <input
+                  type="number"
+                  id="tempo"
+                  placeholder="Em meses"
+                  class="border w-full border-gray-300 w-full rounded-lg px-3 py-1 focus:outline-2 outline-blue-500 mt-3 transition duration-300"
+                />
+              </div>
+            </div>
+
+            <div id="result" class="bg-gray-300 p-4 rounded-lg"></div>
+          </fieldset>
+          <button
+            class="w-full p-3 bg-blue-500 text-white font-semibold rounded-lg shadow-2xl mt-4 hover:bg-blue-600 transition duration-300"
+            onclick="calcular()"
+            type="button"
+          >
+            Calcular
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
